@@ -4,6 +4,7 @@
 - Enabled flexible setup through uvm_config_db (virtual interface, baud rate, data_witdh, parity, stop bits).
 - Created UVM environment with TX and RX agents and multiple testcases for single or multiple data transmission, parity checks, baud rate variation, and error injection (frame, data, parity, stop bit).
 - Verified functionality via scoreboard comparison, ensuring correct operation in both half-duplex and full-duplex modes.
+- Testcases were created please read in file Vplan.
 - Testbench structure
 <img width="1279" height="723" alt="image" src="https://github.com/user-attachments/assets/1a3eeb1c-3acc-4411-9e4a-0c8e76fb0442" />
-- Testcases created please read in vplan
+
