@@ -1,4 +1,4 @@
-# Develop-and-validate-UART-VIP
+# Develop and Validate UART VIP
 - Analyzed UART frame structure (Start, Data, Parity, Stop bits), baud rate, parity modes, and communication between TX and RX.
 - Built UVM components including uart_agent, uart_driver, uart_monitor, uart_sequencer, uart_sequence, and uart_scoreboard.
 - Enabled flexible setup through uvm_config_db (virtual interface, baud rate, data_witdh, parity, stop bits).
