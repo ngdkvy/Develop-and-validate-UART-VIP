@@ -51,20 +51,20 @@ class uart_lhs_driver extends uvm_driver #(uart_transaction);
           `uvm_info(get_type_name(), $sformatf("[Driver] Start of Parity bit. Parity: %p", lhs_config.parity_mode), UVM_LOW)
           if (lhs_config.parity_mode == uart_configuration::NONE)
           begin
-               lhs_if.tx = 1'b0;
+               lhs_if.tx = 1'b1;
                #(lhs_config.num_of_stop_bit * baud_rate_tmp);
           end
           else if (lhs_config.parity_mode == uart_configuration::EVEN) begin
                lhs_if.tx = parity;
                 #(baud_rate_tmp);
-                lhs_if.tx = 1'b0;
+                lhs_if.tx = 1'b1;
                 `uvm_info(get_type_name(), $sformatf("[Driver] Parity: %b. Num of stop bit: %2d", lhs_if.tx, lhs_config.num_of_stop_bit), UVM_LOW)
                 #(lhs_config.num_of_stop_bit * baud_rate_tmp);
           end
           else if (lhs_config.parity_mode == uart_configuration::ODD) begin
                lhs_if.tx = parity;
                #(baud_rate_tmp);
-               lhs_if.tx = 1'b0;
+               lhs_if.tx = 1'b1;
                `uvm_info(get_type_name(), $sformatf("[Driver] Parity: %b. Num of stop bit: %2d", lhs_if.tx, lhs_config.num_of_stop_bit), UVM_LOW)
                #(lhs_config.num_of_stop_bit * baud_rate_tmp);
           end
